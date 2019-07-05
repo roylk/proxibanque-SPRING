@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org"
+  	 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" >
+    <head>
+    	<meta charset="utf-8"/> 
+        <title>Ma Banque </title>
+        	<link rel="stylesheet" type="text/css"  href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"/>
+        	<link rel="stylesheet" type="text/css" href="../static/css/myStyle.css"  th:href="@{/css/myStyle.css}"/>
+        	 <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">      </script> 
+        	 
+    </head>
+    <body>
+    	<header>
+    	
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">PROXIBANQUE</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Operations et comptes <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+         <li><a th:href="@{/operations}">Operations </a></li>
+          <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Gestion Clients <span class="caret"></span></a>
+      	<ul class="dropdown-menu">
+         <li><a th:href="@{/Creer}">creer client </a></li>
+          <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li>
+        </ul>
+        </li>
+      
+      
+       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Agence <span class="caret"></span></a>
+      	<ul class="dropdown-menu">
+         <li><a th:href="@{/CreerA}">creer agence </a></li>
+          <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li>
+        </ul>
+        </li> 		
+    </ul>
+    
+    	 <div class="pull-right">
+                <ul class="nav pull-right">
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span th:utext="${userName}"></span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+                            <li><a href="/help/support"><i class="icon-envelope"></i> Contact Support</a></li>
+                            <li class="divider"></li>
+                            <li><a th:href="@{/logout}"><i class="icon-off"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+              </div>        
+  </div>
+</nav>
+  
+  <!-- 
+    		<div class="navbar navbar-inverse">
+    			<div class="container-fluid">
+    				<ul class="nav navbar-nav">
+    					<li><a th:href="@{/operations}">Operations </a></li>
+    				</ul>
+    				<ul class="nav navbar-nav">
+    					<li><a th:href="@{/clients}">Clients</a></li>
+    				</ul>
+    				<ul class="nav navbar-nav">
+    					<li><a th:href="@{/comptes}">Comptes</a></li>	
+    				</ul>
+    			</div>
+    		</div>
+    		 -->
+    	
+    		
+    	</header>
+    	
+    		<section layout:fragment="content"></section>
+    	<footer>
+    		<div  class="navbar-fixed-bottom"> 
+    		<small> @ Adresse de ma banque</small>
+    		</div>
+    	</footer>
+    	
+    </body>
+</html>
